@@ -68,14 +68,16 @@ $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 $ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
-```                                                                                                                         
-![alt text](images/u:14.04_7.png)
-
+```
 ***source rbenv***
 
 ```
 $ source ~/.bash_profile
 ```
+
+![alt text](images/u:14.04_7.png)
+
+
 **To check if rbenv was set up properly, enter** 
 ```                                                                                                                                                                                                                                                                                                                                                          
 $ type rbenv
