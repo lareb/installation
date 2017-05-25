@@ -54,8 +54,11 @@ Adding ~/.rbenv/bin/rbenv init to your ~/.bash_profile will let you load rbenv a
 Installation of ruby-build ( a plugin for rbenv through git ),which simplifies the installation process for new versions of Ruby to use the  command
 
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
- $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+
+$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+
 $ git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
 $ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
                                                                                                                             
 
