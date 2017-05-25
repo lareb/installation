@@ -17,12 +17,12 @@ Installers can be used to install a specific or multiple Ruby versions. There is
 Managers help you to switch between multiple Ruby installations on your system. 
 And finally, you can also build Ruby from source. 
 
-Installing Ruby for Ubuntu 14.04 using Rbenv
+**Installing Ruby for Ubuntu 14.04 using Rbenv**
+============================================
 
 **Note: The project repository is located on GitHub**
 
 **Install some dependencies for Ruby**
-
 
 *$ sudo apt-get update*
 $ sudo apt-get install build-essential
@@ -73,21 +73,36 @@ $ type rbenv
 The Terminal displays
                                                                                                                                                                              
 rbenv is a function
+
 rbenv () 
-{ 
+
+{
+
     local command;
+    
     command="$ 1";
+    
     if [ "$ #" -gt 0 ]; then
+    
         shift;
+        
     fi;
+    
     case "$ command" in 
+    
         rehash | shell)
+        
             eval "$ (rbenv "sh-$ command" "$ @")"
+            
         ;;
+        
         *)
+        
             command rbenv "$ command" "$ @"
+            
         ;;
-    esac
+        
+    esac    
 }
                                                                                                                                                                              
 
@@ -107,17 +122,28 @@ $ rbenv install --list
 **The Terminal displays**
                                                                                                                                                 
 Available versions:
-  1.8.5-p52
-  1.8.5-p113
-  1.8.5-p114
-   .................
-   .................
-   .................
-   .................
-  ree-1.8.7-2012.01
-  ree-1.8.7-2012.02
-  topaz-dev
+
+1.8.5-p52
+
+1.8.5-p113
+
+1.8.5-p114
+
+.................
+
+.................
+
+.................
+
+.................
+
+ree-1.8.7-2012.01
+
+ree-1.8.7-2012.02
+
+topaz-dev
                                                                                                                                                 
+
 For example , consider installation of Ruby version 2.3.1, and setting it as default version with the global sub-command:
                                                                                                                                                 
 $ rbenv install 2.3.1
@@ -150,10 +176,11 @@ $ gem install rails
 Whenever a new version of Ruby or gem is installed, the rehash sub-command must be run.This will install shims for all Ruby executables known to rbenv, which will allow you to use the executables.
 In computer programming, a shim is a small library that transparently intercepts API calls and changes the arguments passed, handles the operation itself, or redirects the operation elsewhere.
 
-   $ rbenv rehash 
+$ rbenv rehash 
                                                                   
 
 **Verify that Rails has been installed properly** by printing its version, with this command
+
 $ rails -v
                                                                   
 If it installed properly, you will see the version of Rails that was installed.
