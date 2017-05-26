@@ -26,8 +26,13 @@ $ sudo apt-get update
 $ sudo apt-get install build-essential
 
 $ sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev  libgdbm3 libgdbm-dev
-
 ```
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/1.png)
+
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/2.png)
+
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/3.png)
+
 
 **Downloading ruby**
 
@@ -35,11 +40,14 @@ $ sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev lib
 $  wget ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz
 ```
 
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/4.png)
+
 **UnZip the Ruby file**
                                                                     
 ```
 $ tar xzvf ruby-2.4.1.tar.gz
 ```                                                                   
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/5.png)
 
 **Enter into the downloaded directory.**
                                                                     
@@ -52,39 +60,45 @@ $ cd ruby-2.4.1
 ```
 $ ./configure
 ```                                                                   
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/6.png)
+
 
 **After that, still in the directory, you need to run the "make" command.**
                                                                     
 ```
 $ make
 ```                                                                  
-
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/7.png)
 
 This may take a bit longer. Once it finishes, use **make install**
                                                                     
 ```
 $ make install  
 ```                                                                  
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/8.png)
 
 **Installation of Bundler**
  
 ```
 $ gem install bundler
 ```                                                                  
-
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/9.png)
 
 Since ruby package is installed from the source, the gems should already be downloaded. However, they need to be updated.
                                                                  
 ```
 $ gem update --system
 ```                                                                  
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/10.png)
 
 Installation of Rails
 ---------------------
                                                                  
 ```
 $ gem install rails
-```                                                                  
+```
+
+![alt text](https://github.com/tejarvs/installation/blob/master/images/source/11.png)
 
 Verify that Rails has been installed properly by printing its version, with this command
 ```
