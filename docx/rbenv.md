@@ -29,8 +29,8 @@ $ sudo apt-get update
 
 $ sudo apt-get install build-essential
 ```                                                                                                                                                                             
-![alt text](images/u:14.04_1.png)
-![alt text](images/u:14.04_2.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_1.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_2.png)
 
 **apt-get update:** Downloads the package lists from the repositories and updates them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs. 
 
@@ -39,7 +39,7 @@ $ sudo apt-get install build-essential
 ```
 $ sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev  libffi-dev libgdbm3 libgdbm-dev                                                                                                                                                                            
 ```
-![alt text](images/u:14.04_3.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_3.png)
 
 ***Installation of rbenv***
 
@@ -47,17 +47,17 @@ These steps are to be completed from the user account which ruby is to be instal
 ```
 $ git clone git://github.com/sstephenson/rbenv.git .rbenv
 ```                                                                                                                                                                                  
-![alt text](images/u:14.04_6.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_6.png)
 
 If bash: git: command not found error arises 
 
-![alt text](images/u:14.04_4.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_4.png)
 
 **Install git**
 ```
 $ sudo apt-get install git
 ```                                                                                                                                                                               
-![alt text](images/u:14.04_5.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_5.png)
 
 From here, you should add ~/.rbenv/bin to your $ PATH so that you can use rbenv's command line utility. 
 Adding ~/.rbenv/bin/rbenv init to your ~/.bash_profile will let you load rbenv automatically.
@@ -75,7 +75,7 @@ $ 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
 $ source ~/.bash_profile
 ```
 
-![alt text](images/u:14.04_7.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_7.png)
 
 
 **To check if rbenv was set up properly, enter** 
@@ -106,7 +106,7 @@ rbenv ()
 }
                                                                                                                                                                              
 ```
-![alt text](images/u:14.04_8.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_8.png)
 
 
 **Install Ruby**
@@ -133,7 +133,7 @@ ree-1.8.7-2012.01
 ree-1.8.7-2012.02
 topaz-dev                                                                                                                                                
 ```
-![alt text](images/u:14.04_9.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_9.png)
 
 
 For example , consider installation of Ruby version 2.3.1, and setting it as default version with the global sub-command:
@@ -141,7 +141,7 @@ For example , consider installation of Ruby version 2.3.1, and setting it as def
 $ rbenv install 2.3.1
 $ rbenv global 2.3.1
 ```                                                                                                                                                
-![alt text](images/u:14.04_10.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_10.png)
 
 **Verify that Ruby was properly installed** by checking version number
 ```                                                                                                                                                
@@ -161,7 +161,7 @@ Installation of the bundler gem to manage application dependencies
 ```                                                                                                                                                
 $ gem install bundler
 ```                                                                                                                                                
-![alt text](images/u:14.04_11.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/u:14.04_11.png)
 
 **Installation of Rails**
 ---------------------
@@ -180,4 +180,4 @@ $ rails -v
 ```                                                                  
 If it installed properly, you will see the version of Rails that was installed.
 
-For one click installation run the [installation.sh](installtion.sh) 
+For one click installation run the [installation.sh](https://github.com/tejarvs/installation/blob/master/installtion.sh) 
