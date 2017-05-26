@@ -106,4 +106,4 @@ $ rails -v
 ```
 If it installed properly, you will see the version of Rails that was installed.
 
-For one click installation run the[source.sh](https://github.com/tejarvs/installation/blob/master/shell-script/source.sh) 
+For one click installation run the [source.sh](https://github.com/tejarvs/installation/blob/master/shell-script/source.sh) 
