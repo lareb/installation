@@ -133,3 +133,22 @@ Run the following command
 ```
 $ ./rvm.sh
 ```
+Running a Sample Ruby Program
+=============================
+
+Create a file hello.rb
+
+**hello.rb**
+```
+print "Hello, World!\n"
+```
+
+**Running the program (hello.rb)**
+
+```
+$ ruby hello.rb
+```
+
+**The program prints Hello, World!**
+
+![alt text](https://github.com/tejarvs/installation/blob/master/images/f.png)
