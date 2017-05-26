@@ -17,7 +17,7 @@ There are several ways to install Ruby:
 * Managers help you to switch between multiple Ruby installations on your system. 
 * And finally, you can also build Ruby from source. 
 
-**Installing Ruby for Ubuntu 14.04 using Rbenv**
+**Installing Ruby for Ubuntu 15.04 using Rbenv**
 ============================================
 
 **Note: The project repository is located on GitHub**
