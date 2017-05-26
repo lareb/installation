@@ -1,4 +1,4 @@
-**This article consists of steps involved in Installation of Ruby on Rails for various Ubuntu stable versions (14.04,15.04,16.04)**
+This article consists of steps involved in **Installation of Ruby on Rails for various Ubuntu stable versions (14.04,15.04,16.04)**
 ==================================
 Installation using Rbenv
 ------------------------
