@@ -29,7 +29,7 @@ $ sudo apt-get update
 
 $ sudo apt-get install build-essential
 ```                                                                                                                                                                             
-![alt text](https://github.com/tejarvs/installation/blob/master/images/rbenv/u:14.04_1.png)rbenv/
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rbenv/u:14.04_1.png)
 ![alt text](https://github.com/tejarvs/installation/blob/master/images/rbenv/u:14.04_2.png)
 
 **apt-get update:** Downloads the package lists from the repositories and updates them to get information on the newest versions of packages and their dependencies. It will do this for all repositories and PPAs. 
