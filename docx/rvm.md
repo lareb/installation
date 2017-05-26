@@ -37,6 +37,7 @@ $ sudo apt-get install -y curl gnupg build-essential
 
 **gpg** — encryption and signing tool 
 
+
 Installation of RVM
 -------------------
 ```
@@ -46,15 +47,16 @@ $ curl -sSL https://get.rvm.io | sudo bash -s stable
 $ sudo usermod -a -G rvm `whoami`
 ```                                                                  
 ![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/3.png)
-![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/4.png)
-![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/5.png)
 **Note: Some systems may need to use gpg2 instead of gpg**
 
 The **gpg** command contacts a public key server and requests a key associated with the given ID. In this case we are requesting the RVM project's key which is used to sign each RVM release. Having the RVM project's public key allows us to verify the legitimacy of the RVM release we will be downloading, which is signed with the matching private key.  
 
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/4.png)
+
 The **curl** uses the curl web grabbing utility to grab a script file from the rvm website.
 
- 
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/5.png)
+
 
 **To start using RVM you need to run** 
 ```
