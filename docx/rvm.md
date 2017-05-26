@@ -31,6 +31,8 @@ $ sudo apt-get update
                                                                                                                                                                                     
 $ sudo apt-get install -y curl gnupg build-essential                                                                                                                                                                              
 ```
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/1.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/2.png)
 **curl** - Transfers data from or to a server, using one of the protocols: HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE. (To transfer multiple files use wget or FTP.)
 
 **gpg** — encryption and signing tool 
@@ -43,7 +45,9 @@ $ sudo gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A170311
 $ curl -sSL https://get.rvm.io | sudo bash -s stable
 $ sudo usermod -a -G rvm `whoami`
 ```                                                                  
-
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/3.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/4.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/5.png)
 **Note: Some systems may need to use gpg2 instead of gpg**
 
 The **gpg** command contacts a public key server and requests a key associated with the given ID. In this case we are requesting the RVM project's key which is used to sign each RVM release. Having the RVM project's public key allows us to verify the legitimacy of the RVM release we will be downloading, which is signed with the matching private key.  
@@ -56,6 +60,7 @@ The **curl** uses the curl web grabbing utility to grab a script file from the r
 ```
 $ source /etc/profile.d/rvm.sh
 ```
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/6.png)
 
 **Note: Run the above command everytime when logged in compulsorily to start the rvm.**
 
@@ -67,9 +72,12 @@ Installation of Ruby
 $ rvm install ruby
 
 $ rvm –default use ruby
-```                                                                  
+```
 
-**To install the latest version of Ruby, run:**
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/11.png)
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/12.png)
+
+**To install the Particular Ruby version of Ruby, run:**
 ```                                                                  
 $ rvm install ruby-X.X.X
 
@@ -87,7 +95,8 @@ $ rvm –-default use ruby-2.3.1
 **Installation of Bundler**                                                          
 ```
 $ gem install bundler
-```                                                                  
+```            
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/13.png)
 
 Installation of Rails
 ---------------------
@@ -99,12 +108,14 @@ Rails ships with so many dependencies these days, we're going to need to install
 ```
 $ curl -sL https://deb.nodesource.com/setup_4.x | apt-get install      -y nodejs
 ```                                                                  
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/14.png)
 
 **Installation of Rails**
                                                                   
 ```
 $ gem install rails -v 5.0.1
 ```                                                                  
+![alt text](https://github.com/tejarvs/installation/blob/master/images/rvm/15.png)
 
 Verify that Rails has been installed properly by printing its version, with this command
 ```
