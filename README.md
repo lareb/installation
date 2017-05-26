@@ -1,4 +1,4 @@
-**INSTALLATION OF RUBY ON RAILS( USING RBENV )**
+**INSTALLATION OF RUBY ON RAILS (USING RBENV)**
 ============================================
 
 
