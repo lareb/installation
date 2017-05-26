@@ -182,3 +182,9 @@ If it installed properly, you will see the version of Rails that was installed.
 
 For one step installation run the [rbenv.sh](https://github.com/tejarvs/installation/blob/master/shell-script/rbenv.sh) 
 =========================================================================================================================
+
+Run the following command
+
+```
+$ ./rbenv.sh
+```
