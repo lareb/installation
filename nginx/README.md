@@ -17,6 +17,10 @@ To run Nginx while binding the guest port 80 to the host port 80
 $ sudo docker run --name docker-nginx -p 80:80 nginx
 ```
 
+Open any web browser and enter localhost:80
+-------------------------------------------
+
+
 To run it in the background add -d
 -------------------------------
 ```
