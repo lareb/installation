@@ -38,5 +38,5 @@ $ docker stop docker-nginx
 Remove the container
 --------------------
 ```
-docker rm docker-nginx
+$ docker rm docker-nginx
 ```
