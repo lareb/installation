@@ -8,10 +8,12 @@ Introduction
 
 Nginx (pronounced engine x) is a lightweight, free, open-source HTTP and reverse proxy server, as well as a mail proxy server. The Nginx project started with a strong focus on high concurrency, high performance and low memory usage.It is one of the most popular web servers in the world and is responsible for hosting some of the largest and highest-traffic sites on the Internet. It is more resource-friendly than Apache in most cases and can be used as a web server or a reverse proxy.
 
+
 Prerequisites
 -------------
 
 Assuming that ruby,rails,docker,nginx are installed and configuerd properly.
+
 
 Build simple Rails app
 ----------------------
@@ -23,15 +25,18 @@ Building simple Ruby on Rails application without database / Active Record.
 $ rails new sample_rails_docker_app -O
 ```
 
+
 **After you create the sample_rails_docker_app application, switch to its folder**
 ```
 $ cd sample_rails_docker_app
 ```
 
+
 **Creating a controller**
 ```
 $ rails g controller hello_world
 ```
+
 
 **Open app/controllers/hello_world_controller.rb and add hello action**
 ```
@@ -46,6 +51,7 @@ class HelloWorldController < ApplicationController
 end
 ```
 
+
 **The hello action reponds with simple “Hello world!” message in JSON format. Next, edit config/routes.rb**
 ```
 Rails.application.routes.draw do
@@ -56,10 +62,12 @@ Rails.application.routes.draw do
   
 end
 ```
+
 **Now you can test if everything works fine**
 ```
 $ rails s
 ```
+
 
 Docker
 ------
@@ -74,15 +82,18 @@ $ sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
 $ sudo apt-get install docker-engine
 ```
 
+
 **To start docker deamon**
 ```
 $ sudo service docker start
 ```
 
+
 **To verify your docker deamon**
 ```
 $ docker info
 ```
+
 
 Docker compose
 --------------
@@ -93,6 +104,7 @@ $ curl -L "https://github.com/docker/compose/releases/download/1.8.1/docker-comp
 $ chmod +x /usr/local/bin/docker-compose
 $ docker-compose –version
 ```
+
 
 Dockerize Rails app and Nginx – separate containers
 ---------------------------------------------------
@@ -144,25 +156,33 @@ EXPOSE 3000
 CMD bundle exec puma -C config/puma.rb
 ```
 
+
 **Explaination of commands used above**
 
 **FROM**
+
 FROM directive is probably the most crucial amongst all others for Dockerfiles. It defines the base image to use to start the build process. It can be any image, including the ones you have created previously. If a FROM image is not found on the host, docker will try to find it (and download) from the docker image index. It needs to be the first command declared inside a Dockerfile.
 
 **CMD**
+
 The command CMD, similarly to RUN, can be used for executing a specific command. However, unlike RUN it is not executed during build, but when a container is instantiated using the image being built. Therefore, it should be considered as an initial, default command that gets executed (i.e. run) with the creation of containers based on the image.
 
 **EXPOSE**
+
 The EXPOSE command is used to associate a specified port to enable networking between the running process inside the container and the outside world (i.e. the host).
 
 **RUN**
+
 The RUN command is the central executing directive for Dockerfiles. It takes a command as its argument and runs it to form the image. Unlike CMD, it actually is used to build the image (forming another layer on top of the previous one which is committed).
 
 **WORKDIR**
+
 The WORKDIR directive is used to set where the command defined with CMD is to be executed.
 
 **ENV**
+
 The ENV command is used to set the environment variables (one or more). These variables consist of “key = value” pairs which can be accessed within the container by scripts and applications alike. This functionality of docker offers an enormous amount of flexibility for running programs.
+
 
 **Create similar file for nginx: Dockerfile-nginx, also in project’s root directory**
 ```
@@ -198,7 +218,9 @@ EXPOSE 80
 # Use the "exec" form of CMD so Nginx shuts down gracefully on SIGTERM (i.e. `docker stop`)
 CMD [ "nginx", "-g", "daemon off;" ]
 ```
+
 **create docker-compose.yml, also in root directory**
+
 ```
 version: '2'
 services:
@@ -219,6 +241,7 @@ services:
 - "80:80"
 ```
 
+
 This docker-compose.yml file tells Docker to do the following:
 
  - Run five instances of the image uploaded as a service called web,
@@ -230,6 +253,7 @@ This docker-compose.yml file tells Docker to do the following:
  - Define the webnet network with the default settings (which is a load-balanced overlay network). 
 
 **create configuration file for Nginx (in config folder): config/nginx.conf**
+
 ```
 upstream puma_sample_rails_docker_app {
   server app:3000;
@@ -298,20 +322,25 @@ server {
 }
 ```
 
-**NOTE : Add the url of your choice at server_name
+
+**NOTE** : Add the url of your choice at server_name
 For example if I want to run my rails app by typing orange.com
-change add server_name example.com to  add server_name orange.com** 
+**change add server_name example.com to  add server_name orange.com** 
 
 **Upstream Context**
+
 The upstream context is used to define and configure "upstream" servers. Basically, this context defines a named pool of servers that Nginx can then proxy requests to. This context will likely be used when you are configuring proxies of various types.
 
 **Server Context**
+
 The "server" context is declared within the "http" context. This is our first example of nested, bracketed contexts. It is also the first context that allows for multiple declarations.
 
 **Location Context**
+
 The next context that you will deal with regularly is the location context. Location contexts share many relational qualities with server contexts. For example, multiple location contexts can be defined, each location is used to handle a certain type of client request, and each location is selected by virtue of matching the location definition against the client request through a selection algorithm.
 
 While the directives that determine whether to select a server block are defined within the server context, the component that decides on a location's ability to handle a request is located in the location definition (the line that opens the location block).
+
 
 BUILD AND RUN
 -------------
@@ -321,29 +350,37 @@ BUILD AND RUN
 $ docker-compose build
 ```
 
+
 **To verify that images were built**
 ```
 $ docker images
 ```
+
 
 **To run both containers via docker-compose**
 ```
 $ docker-compose up
 ```
 
+
 **Now open the web browser and type localhost:3000**
+
 
 **If Rails home page doesn’t show up run the below command and try again**
 ```
 $ telnet -4 localhost 80
 ```
 
+
 **Adding the user defined url**
+
 ```
 Open terminal
 $ nano /etc/hosts
 ```
+
 **Add the following lines under to
+
 ```
 # The following lines are newly added hosts
 
