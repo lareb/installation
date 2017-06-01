@@ -25,17 +25,23 @@ Building simple Ruby on Rails application without database / Active Record.
 $ rails new sample_rails_docker_app -O
 ```
 
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/1.png)
+
 
 **After you create the sample_rails_docker_app application, switch to its folder**
 ```
 $ cd sample_rails_docker_app
 ```
 
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/2.png)
+
 
 **Creating a controller**
 ```
 $ rails g controller hello_world
 ```
+
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/3.png)
 
 
 **Open app/controllers/hello_world_controller.rb and add hello action**
@@ -53,6 +59,7 @@ end
 
 
 **The hello action reponds with simple “Hello world!” message in JSON format. Next, edit config/routes.rb**
+
 ```
 Rails.application.routes.draw do
   
@@ -68,6 +75,12 @@ end
 $ rails s
 ```
 
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/6.png)
+
+**Open the web browser and type localhost:3000**
+
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/7.png)
+
 
 Docker
 ------
@@ -82,6 +95,8 @@ $ sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
 $ sudo apt-get install docker-engine
 ```
 
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/8.png)
+
 
 **To start docker deamon**
 ```
@@ -94,6 +109,9 @@ $ sudo service docker start
 $ docker info
 ```
 
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/9.png)
+
+
 
 Docker compose
 --------------
@@ -105,6 +123,9 @@ $ chmod +x /usr/local/bin/docker-compose
 $ docker-compose –version
 ```
 
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/10.png)
+
+
 
 Dockerize Rails app and Nginx – separate containers
 ---------------------------------------------------
@@ -114,9 +135,9 @@ In this configuration, Nginx and Rails are running inside different containers. 
  - web – for Nginx container,  
  - app – for Rails app container.
 
-create:
+Create 2 Dockerfiles:
 
- - 2 Dockerfiles – one for Rails app and one for Nginx 
+ -  one for Rails app and one for Nginx 
    docker-compose.yml – it allows us to manage both services in
    oneefile.  
  -  nginx.conf – nginx configuration file
@@ -350,17 +371,26 @@ BUILD AND RUN
 $ docker-compose build
 ```
 
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/11.png)
+
+
 
 **To verify that images were built**
 ```
 $ docker images
 ```
 
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/12.png)
+
+
 
 **To run both containers via docker-compose**
 ```
 $ docker-compose up
 ```
+
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/13.png)
+
 
 
 **Now open the web browser and type localhost:3000**
@@ -394,3 +424,6 @@ $ nano /etc/hosts
 ```
 
 **Now open the web browser and type example.com**
+
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/14.png)
+
