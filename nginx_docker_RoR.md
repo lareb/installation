@@ -371,6 +371,12 @@ $ docker-compose up
 $ telnet -4 localhost 80
 ```
 
+**If port:80 is used by another processes free the port using the following command**
+
+```
+sudo fuser -k 80/tcp
+```
+
 
 **Adding the user defined url**
 
