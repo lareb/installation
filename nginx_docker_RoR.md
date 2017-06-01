@@ -344,7 +344,8 @@ server {
 ```
 
 
-**NOTE** : Add the url of your choice at server_name
+**NOTE** : Add the url of your choice at server_name.
+
 For example if I want to run my rails app by typing orange.com
 **change add server_name example.com to  add server_name orange.com** 
 
