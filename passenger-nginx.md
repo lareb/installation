@@ -47,7 +47,7 @@ The installation process will begin an interactive session that will guide you t
 Enable Passenger Support and Start Nginx
 ----------------------------------------
 
-Nginx is now installed on your system, but you need to enable support for Phusion Passenger. Edit the file /etc/nginx/nginx.conf and uncomment these lines
+Nginx is now installed on your system, but you need to enable support for Phusion Passenger. Edit the file /etc/nginx/nginx.conf and uncomment these lines.If not present add these lines to the file.
 
 **NOTE: This is where the files will be located if you install nginx from the package manager. Other possible locations include /opt/nginx/conf/nginx.conf**
 
@@ -64,6 +64,7 @@ server {
   server_name example.com;
   passenger_enabled on;
   root /var/www/rails_app/public;
+  passenger_app_env development;
 }
 ```
 
@@ -74,5 +75,7 @@ $ sudo /etc/init.d/nginx stop
 $ sudo /etc/init.d/nginx start 
 $ sudo /etc/init.d/nginx restart
 ```
+**Now create a simple rails application.**
 
+**Open any web browser and type example.com**
 
