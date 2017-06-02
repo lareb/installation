@@ -1,10 +1,11 @@
+```
 RUBY COURSE
 
 1. INTRODUCTION
 	1.1. What is Ruby ?
 	1.2. History of Ruby
 	1.3. Features of Ruby
-	1.4. Similarities and Differences with other programming 			languages
+	1.4. Similarities and Differences with other programming languages
 
 
 2. Ruby Installation
@@ -170,3 +171,4 @@ RUBY COURSE
 	14.8 Thread States
 	14.9 Thread Class Methods
 	14.10 Thread Instance Methods
+```
