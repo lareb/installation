@@ -79,3 +79,4 @@ $ sudo /etc/init.d/nginx restart
 
 **Open any web browser and type example.com**
 
+![alt text](https://github.com/teja-rvs/installation/blob/master/images/nginx-docker-RoR/2.png)
